@@ -48,10 +48,10 @@
                        name="phone" value="">
 
             </div>
-            <a href="main.html" class="btn btn-primary bg-success text-white" style="width: 100%"
-               id="logIn">
+            <button class="btn btn-primary bg-success text-white" style="width: 100%"
+                    id="logIn">
                 Login
-            </a>
+            </button>
         </form>
     </div>
 
@@ -76,6 +76,8 @@
                 if (myData.status == "fail"){
                     ('#userhelp').text("This user does not exist. " +
                         "Please check the correctness of the user name and phone number.")
+                } else {
+                    window.location='http://1010ts.azurewebsites.net/prerelize/web/main.html';
                 }
 
             },
