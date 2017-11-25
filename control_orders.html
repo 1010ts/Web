@@ -248,7 +248,7 @@
 
 
     function flyToStore(currentFeature) {
-        map.flyTo({
+        control_orders.flyTo({
             center: currentFeature.geometry.coordinates,
             zoom: 15
         });
@@ -263,13 +263,13 @@
             .setLngLat(currentFeature.geometry.coordinates)
             .setHTML('<h3>Sweetgreen</h3>' +
                 '<h4>' + currentFeature.properties.address + '</h4>')
-            .addTo(map);
+            .addTo(control_orders);
     }
     mapboxgl.accessToken = 'pk.eyJ1IjoiZW5pa2l0YTEiLCJhIjoiY2phZXlwc2EzMXRnajMzcDc2MnAzb2pneSJ9.Sgb3_uoPIRLmlaFfzfiHjw';
     // This adds the map to your page
     var map = new mapboxgl.Map({
         // container id specified in the HTML
-        container: 'map',
+        container: 'control_orders',
         // style URL
 //        style: 'link to picture of track',
         // initial position in [lon, lat] format
@@ -339,7 +339,7 @@
             strokeWeight: 2
         });
 
-        flightPath.setMap(map);
+        flightPath.setMap(control_orders);
 
     }
 </script>
