@@ -82,7 +82,7 @@
                 <h5 style="text-align: center">Options for truck status </h5>
 
                 <div action="/register/" method="post" ><div id="right-panel">…</div>
-                        <input type="text" class="form-control"  id="TruckNumber" placeholder="TruckNumber" name="trucknumber"
+                        <input type="text" class="form-control"  id="StartTime" placeholder="Start time" name="starttime"
                                value="">
                 </div>
         <br>
@@ -182,7 +182,7 @@
 
         <script>
             $('#submutbutton').on('click',function(){
-                console.log("click on button")
+                console.log("click on button");
                 $.ajax({
                     type:"POST",
                     url:"http://1010ts.azurewebsites.net/api/OrderCar?name=" + $('#InputName').val()+

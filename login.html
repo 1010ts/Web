@@ -67,7 +67,7 @@
     $('#logIn').on('click',function(){
         console.log("click on button");
         $.ajax({
-            type:"GET",
+            type:"POST",
             url:"http://1010ts.azurewebsites.net/api/client?name=" + $('#InputName').val()+
             "&phone=" + $('#InputPhone').val(),
             success:function(data){
