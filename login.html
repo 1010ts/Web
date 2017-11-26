@@ -65,7 +65,7 @@
 
 <script>
     $('#logIn').on('click',function(){
-        console.log("click on button")
+        console.log("click on button");
         $.ajax({
             type:"GET",
             url:"http://1010ts.azurewebsites.net/api/client?name=" + $('#InputName').val()+
@@ -75,11 +75,11 @@
                 var myData = JSON.parse(data);
                 if (myData.status == "fail"){
                     ('#userhelp').text("This user does not exist. " +
-                        "Please check the correctness of the user name and phone number.")
+                        "Please check the correctness of the user name and phone number.");
+                    window.location='http://1010ts.azurewebsites.net/prerelize/web/login.html';
                 } else {
-                    window.location='http://1010ts.azurewebsites.net/prerelize/web/main.html';
+                    window.location='http://1010ts.azurewebsites.net/prerelize/web/new_order.html';
                 }
-
             },
             error:function(err){
                 console.log("Error is" + err)
